@@ -13,13 +13,9 @@ This project is a Horse Ride Booking System built with React, Chakra UI, and Fra
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/your-username/horse-ride-booking-system.git
+   git clone https://github.com/anto-mervin/horse-site.git ./
     ```
-2. Change to the project directory:
-    ```bash
-    cd horse-ride-booking-system
-    ```
-3. Install dependencies:
+2. Install dependencies:
     ```bash
     npm install
     ```
