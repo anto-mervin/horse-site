@@ -1,6 +1,7 @@
 import React from "react";
 import { Box, Heading, Text, SimpleGrid, Image, Stack } from "@chakra-ui/react";
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 const horses = [
   {
@@ -27,8 +28,8 @@ const horses = [
 ];
 
 const MotionBox = motion(Box);
-
 const BookSection = () => {
+  const naviagate = useNavigate();
   return (
     <Box as="section" px={8} py={4} bg="gray.100">
       <Stack spacing={6} textAlign="center" maxW="lg" mx="auto" mb={8}>
@@ -54,6 +55,9 @@ const BookSection = () => {
             overflow="hidden"
             whileHover={{ scale: 1.05 }}
             transition={{ type: "spring", stiffness: 300 }}
+            onClick={() => {
+              naviagate("/booking-form");
+            }}
           >
             <Image
               src={horse.image}

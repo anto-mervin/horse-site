@@ -9,12 +9,15 @@ import {
   Flex,
 } from "@chakra-ui/react";
 
+import { useNavigate } from "react-router-dom";
+
 import { useEffect } from "react";
 
 import Cookies from "js-cookie";
 import { v4 as uuidv4 } from "uuid";
 
 const HeroSection = () => {
+  const naviagate = useNavigate();
   useEffect(() => {
     let userId = Cookies.get("userId");
     if (!userId) {
@@ -45,7 +48,15 @@ const HeroSection = () => {
           Enjoy a seamless experience with our website. Choose your ride, select
           your schedule in just a few taps.
         </Text>
-        <Button colorScheme="blue" size="sm" width={"150px"} h={"50px"}>
+        <Button
+          colorScheme="blue"
+          size="sm"
+          width={"150px"}
+          h={"50px"}
+          onClick={() => {
+            naviagate("/booking-form");
+          }}
+        >
           Book Now
         </Button>
       </Stack>
